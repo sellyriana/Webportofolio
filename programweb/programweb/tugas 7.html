@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Tabel HTML</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            color: #111;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: none;
+            border-top: 1px solid #aaa;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #777;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        th {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        td {
+            text-align: left;
+        }
+
+        .nomor {
+            text-align: center;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 20px;
+            font-weight: normal;
+            padding-bottom: 5px;
+        }
+
+        .table1 {
+            width: 550px;
+        }
+
+        .table2 {
+            width: 665px;
+        }
+
+        .table3 {
+            width: 530px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .penjelasan {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- 2. TABLE DENGAN ATRIBUT -->
+    <!-- ============================= -->
+
+    <h2>2. Table dengan Atribut dan Kolom baris lebih banyak</h2>
+
+    <table class="table1">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Nim</th>
+            <th>Prodi</th>
+            <th>Kota Asal</th>
+        </tr>
+
+        <tr>
+            <td class="nomor">1</td>
+            <td>Budi</td>
+            <td>1233445566</td>
+            <td>Sistem Informasi</td>
+            <td>Bekasi</td>
+        </tr>
+
+        <tr>
+            <td class="nomor">2</td>
+            <td>Budi</td>
+            <td>1233445566</td>
+            <td>Sistem Informasi</td>
+            <td>Bekasi</td>
+        </tr>
+
+        <tr>
+            <td class="nomor">3</td>
+            <td>Budi</td>
+            <td>1233445566</td>
+            <td>Sistem Informasi</td>
+            <td>Bekasi</td>
+        </tr>
+
+        <tr>
+            <td class="nomor">4</td>
+            <td>Budi</td>
+            <td>1233445566</td>
+            <td>Sistem Informasi</td>
+            <td>Bekasi</td>
+        </tr>
+
+        <tr>
+            <td class="nomor">5</td>
+            <td>Budi</td>
+            <td>1233445566</td>
+            <td>Sistem Informasi</td>
+            <td>Bekasi</td>
+        </tr>
+
+        <tr>
+            <td class="nomor">6</td>
+            <td>Budi</td>
+            <td>1233445566</td>
+            <td>Sistem Informasi</td>
+            <td>Bekasi</td>
+        </tr>
+    </table>
+
+
+    <hr>
+
+
+    <!-- ============================= -->
+    <!-- 3. TABLE DENGAN COLSPAN -->
+    <!-- ============================= -->
+
+    <h2>3. Table dengan Colspan dan Caption</h2>
+
+    <p class="penjelasan">
+        Colspan digunakan untuk menggabungkan beberapa kolom secara horizontal.
+    </p>
+
+    <table class="table2">
+        <caption>Data Mahasiswa Prodi Sistem Informasi</caption>
+
+        <tr>
+            <th rowspan="2">No</th>
+            <th rowspan="2">Nama</th>
+            <th rowspan="2">Nim</th>
+            <th colspan="2">Kontak</th>
+        </tr>
+
+        <tr>
+            <th>Email</th>
+            <th>Telepon</th>
+        </tr>
+
+        <tr>
+            <td class="nomor">1</td>
+            <td>Alince</td>
+            <td>12345567</td>
+            <td>alince@gmail.com</td>
+            <td>08654362845</td>
+        </tr>
+
+        <tr>
+            <td class="nomor">1</td>
+            <td>Alince</td>
+            <td>12345567</td>
+            <td>alince@gmail.com</td>
+            <td>08654362845</td>
+        </tr>
+
+        <tr>
+            <td class="nomor">1</td>
+            <td>Alince</td>
+            <td>12345567</td>
+            <td>alince@gmail.com</td>
+            <td>08654362845</td>
+        </tr>
+
+        <tr>
+            <td class="nomor">1</td>
+            <td>Alince</td>
+            <td>12345567</td>
+            <td>alince@gmail.com</td>
+            <td>08654362845</td>
+        </tr>
+    </table>
+
+
+    <hr>
+
+
+    <!-- ============================= -->
+    <!-- 4. TABLE DENGAN ROWSPAN -->
+    <!-- ============================= -->
+
+    <h2>4. Table dengan Rowspan dan Caption</h2>
+
+    <table class="table3">
+        <caption>Data Mata Kuliah</caption>
+
+        <tr>
+            <th>Nim</th>
+            <th>Nama</th>
+            <th>Mata Kuliah</th>
+        </tr>
+
+        <tr>
+            <td rowspan="3" class="center">
+                203474235794
+            </td>
+
+            <td rowspan="3" class="center">
+                Ghina
+            </td>
+
+            <td>
+                Pemrograman Web 1
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Manajemen Sains
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Audit Sistem Informasi
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

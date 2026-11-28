@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Perhitungan Belanja</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input {
+            width: 210px;
+            padding: 7px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 7px 12px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #hasil {
+            margin-top: 25px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SIMULASI PERHITUNGAN BELANJA</h1>
+
+    <label>Nama Pembeli:</label><br>
+    <input type="text" id="nama" placeholder="Masukkan nama pembeli">
+
+    <br>
+
+    <label>Total Belanja (Rp):</label><br>
+    <input type="number" id="belanja" placeholder="Masukkan total belanja" min="0">
+
+    <br>
+
+    <button onclick="hitungTotal()">Hitung Total</button>
+
+    <div id="hasil"></div>
+
+    <script>
+        function hitungTotal() {
+            let nama = document.getElementById("nama").value;
+            let belanja = document.getElementById("belanja").value;
+
+            if (nama.trim() === "" || belanja === "") {
+                alert("Nama dan total belanja harus diisi!");
+                return;
+            }
+
+            let total = Number(belanja);
+
+            if (!Number.isFinite(total) || total < 0) {
+                alert("Total belanja tidak boleh negatif!");
+                return;
+            }
+
+            let diskon;
+
+            if (total >= 500000) {
+                diskon = 20;
+            } else if (total >= 300000) {
+                diskon = 15;
+            } else if (total >= 100000) {
+                diskon = 10;
+            } else {
+                diskon = 0;
+            }
+
+            let potongan = total * diskon / 100;
+            let bayar = total - potongan;
+
+            let rupiah = angka => angka.toLocaleString("id-ID");
+
+            document.getElementById("hasil").innerHTML =
+                "<h2>Hasil Perhitungan</h2>" +
+                "Nama Pembeli: " + nama + "<br>" +
+                "Total Belanja: Rp " + rupiah(total) + "<br>" +
+                "Diskon: " + diskon + "%<br>" +
+                "Potongan: Rp " + rupiah(potongan) + "<br>" +
+                "Total Bayar: Rp " + rupiah(bayar);
+        }
+    </script>
+
+</body>
+</html>
